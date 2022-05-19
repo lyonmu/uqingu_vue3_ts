@@ -1,42 +1,18 @@
 <template>
-  <el-table-v2
-    :columns="columns"
-    :data="data"
-    :width="700"
-    :height="400"
-    fixed
-  />
+  <h1>{{ title }}</h1>
 </template>
 
 <script lang="ts" setup>
-const generateColumns = (length = 10, prefix = 'column-', props?: any) =>
-  Array.from({ length }).map((_, columnIndex) => ({
-    ...props,
-    key: `${prefix}${columnIndex}`,
-    dataKey: `${prefix}${columnIndex}`,
-    title: `Column ${columnIndex}`,
-    width: 150,
-  }))
+import { useStore } from '../stores'
+import { reactive, onMounted, onUpdated, toRefs } from "vue"
+const store = useStore()
 
-const generateData = (
-  columns: ReturnType<typeof generateColumns>,
-  length = 200,
-  prefix = 'row-'
-) =>
-  Array.from({ length }).map((_, rowIndex) => {
-    return columns.reduce(
-      (rowData, column, columnIndex) => {
-        rowData[column.dataKey] = `Row ${rowIndex} - Col ${columnIndex}`
-        return rowData
-      },
-      {
-        id: `${prefix}${rowIndex}`,
-        parentId: null,
-      }
-    )
-  })
-
-const columns = generateColumns(10)
-const data = generateData(columns, 200)
+interface Index {
+  title: string,
+}
+let index: Index = reactive({
+  title: store.title
+})
+let { title } = toRefs(index)
 </script>
 

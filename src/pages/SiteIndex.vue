@@ -1,5 +1,6 @@
 <template>
   <h1>{{ title }}</h1>
+  <h1>{{ userInfo.id }}</h1>
 </template>
 
 <script lang="ts" setup>
@@ -13,6 +14,14 @@ interface Index {
 let index: Index = reactive({
   title: store.title
 })
+
 let { title } = toRefs(index)
+
+let { userInfo } = toRefs(store)
+
+onMounted(() => {
+  store.getUserInfo()
+  console.log(store.userInfo)
+});
 </script>
 

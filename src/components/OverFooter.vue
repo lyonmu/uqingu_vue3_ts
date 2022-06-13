@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { reactive, onMounted, onUpdated, toRefs } from "vue"
+import { reactive, toRefs } from "vue"
 
 interface Footer {
     runtime: string;
@@ -24,7 +24,7 @@ p {
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
     color: #003472;
-    font-size: 5px;
+    font-size: 15px;
 }
 
 a {

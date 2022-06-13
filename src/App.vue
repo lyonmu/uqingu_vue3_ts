@@ -23,6 +23,7 @@ onMounted(() => {
             font-size: 15px;
             border-radius:5px;`;
   console.log("%cuqingu 0.0.1-rc", css);
+  console.log(import.meta.env.VITE_SOME_SERVER_API);
 });
 </script>
 

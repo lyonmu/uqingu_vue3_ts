@@ -24,7 +24,7 @@ p {
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
     color: #003472;
-    font-size: 15px;
+    font-size: 12px;
 }
 
 a {

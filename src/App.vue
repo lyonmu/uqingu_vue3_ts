@@ -44,7 +44,7 @@ onMounted(() => {
     </div>
   </el-backtop>
   <el-container :direction="direction">
-    <el-header class="footerstyle">
+    <el-header class="navstyle">
       <NavigationBar />
     </el-header>
     <el-main class="elmainstyle">
@@ -58,10 +58,15 @@ onMounted(() => {
 </template>
 
 <style scoped>
-.footerstyle {
+.navstyle {
   text-align: center;
   background-color: #bbcdc5;
   background-size: cover;
+  margin: 0px, 0px, 0px, 0px;
+  padding: 0px, 0px, 0px, 0px;
+}
+.footerstyle {
+  text-align: center;
   margin: 0px, 0px, 0px, 0px;
   padding: 0px, 0px, 0px, 0px;
 }

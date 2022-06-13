@@ -1,13 +1,14 @@
-interface userinfo {
-  avatar: string;
-  createTime: string;
-  description: string;
-  email: string;
+type userinfo = {
   id: number;
-  mfaType: string;
-  nickname: string;
-  updateTime: string;
   username: string;
-}
+  nickname: string;
+  email: string;
+  avatar: string;
+  description: string;
+  title: string;
+  miit: string;
+  author: string;
+  createTime: number;
+};
 
 export type { userinfo };

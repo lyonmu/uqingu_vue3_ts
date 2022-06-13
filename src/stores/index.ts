@@ -1,7 +1,7 @@
 import { defineStore } from "pinia";
 import { User } from "../severapi";
 import { userinfo } from "./type";
-import test from '/public/test.md?import&raw'
+import test from '/public/about.md?import&raw'
 
 export const useStore = defineStore({
   id: "counter",
@@ -13,7 +13,7 @@ export const useStore = defineStore({
   actions: {
     getUserInfo() {
       User.UserInfo().then((response) => {
-        this.userInfo = response.data;
+        this.userInfo = response?.data;
       });
     },
     getAboutMe() {

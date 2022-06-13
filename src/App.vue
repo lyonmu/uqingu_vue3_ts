@@ -73,6 +73,6 @@ onMounted(() => {
 }
 
 .elmainstyle {
-  min-height: calc(100vh - 123px)
+  min-height: calc(100vh - 120px)
 }
 </style>

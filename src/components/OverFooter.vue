@@ -1,23 +1,32 @@
 <script setup lang="ts">
-import { reactive, toRefs } from "vue"
+import { useStore } from '../stores'
+import { onMounted, toRefs, computed } from "vue"
+import dayjs from 'dayjs'
 
-interface Footer {
-    runtime: string;
-}
+const store = useStore()
 
-let footer: Footer = reactive({
-    runtime: "2020年03月22日 20:27:04"
+let { userInfo } = toRefs(store)
+
+onMounted(() => {
+    store.getUserInfo()
+    store.getAboutMe()
+});
+
+const runtime = computed(() => {
+    return dayjs(store.userInfo.createTime).format(
+        "YYYY年MM月DD日"
+    );
 })
-let { runtime } = toRefs(footer)
+
 </script>
 
 <template>
-    <p>
-        <a href="http://beian.miit.gov.cn/" target="_blank">豫ICP备2021021610号-1</a>
-    </p>
     <p>{{ runtime }}</p>
     <p>
-        <a href="https://muqingcloud.space" target="_blank">Copyright © 2022 muqingcloud.space</a>
+        <a href="http://beian.miit.gov.cn/" target="_blank">{{ userInfo.miit }}</a>
+    </p>
+    <p>
+        <a href="https://muqingcloud.space" target="_blank">Copyright © 2022 {{ userInfo.author }}</a>
     </p>
 </template>
 

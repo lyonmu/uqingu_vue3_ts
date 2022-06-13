@@ -1,9 +1,9 @@
 // 获取数据的函数
 import axios from "axios";
 // 后端服务地址
-const SERVER_URl = import.meta.env.VITE_SOME_SERVER_API;
+// const SERVER_URl = import.meta.env.VITE_SOME_SERVER_API;
 export default {
-  UserInfo: async () => {
+  /* UserInfo: async () => {
     try {
       const result = await axios.get(SERVER_URl + "/content/users/profile", {
         headers: {
@@ -11,6 +11,15 @@ export default {
         },
       });
       return result.data;
+    } catch (error) {
+      console.error(error);
+    }
+  }, */
+
+  UserInfo: async () => {
+    try {
+      const result = await axios.get("/info.json");
+      return result;
     } catch (error) {
       console.error(error);
     }

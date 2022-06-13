@@ -1,13 +1,14 @@
 import { defineStore } from "pinia";
-import { User,AboutMe } from "../severapi";
+import { User } from "../severapi";
 import { userinfo } from "./type";
+import test from '/public/test.md?import&raw'
 
 export const useStore = defineStore({
   id: "counter",
   state: () => ({
     title: "木青笔记",
     userInfo: {} as userinfo,
-    aboutMe: {},
+    aboutMe: "",
   }),
   actions: {
     getUserInfo() {
@@ -16,7 +17,7 @@ export const useStore = defineStore({
       });
     },
     getAboutMe() {
-      this.aboutMe = AboutMe;
+      this.aboutMe = test;
     },
   },
 });

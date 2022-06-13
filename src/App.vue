@@ -23,7 +23,6 @@ onMounted(() => {
             font-size: 15px;
             border-radius:5px;`;
   console.log("%cuqingu 0.0.1-rc", css);
-  console.log(import.meta.env.VITE_SOME_SERVER_API);
 });
 </script>
 
@@ -60,11 +59,13 @@ onMounted(() => {
 <style scoped>
 .navstyle {
   text-align: center;
-  background-color: #bbcdc5;
+  background-color:transparent;
+  background-color: rgba(255,255,255,0.2);
   background-size: cover;
   margin: 0px, 0px, 0px, 0px;
   padding: 0px, 0px, 0px, 0px;
 }
+
 .footerstyle {
   text-align: center;
   margin: 0px, 0px, 0px, 0px;

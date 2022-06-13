@@ -10,6 +10,8 @@
   "dependencies": {
     "@icon-park/vue-next": "^1.4.0",
     "axios": "^0.27.2",
+    "cos-nodejs-sdk-v5": "^2.11.10",
+    "dayjs": "^1.11.3",
     "element-plus": "^2.2.0",
     "pinia": "^2.0.14",
     "vue": "^3.2.25",

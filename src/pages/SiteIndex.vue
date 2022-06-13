@@ -9,6 +9,7 @@
   <h1>{{ userInfo.nickname }}</h1>
   <h1>{{ userInfo.updateTime }}</h1>
   <h1>{{ userInfo.username }}</h1>
+  <h1>{{ aboutMe }}</h1>
 </template>
 
 <script lang="ts" setup>
@@ -16,10 +17,12 @@ import { useStore } from '../stores'
 import { onMounted, toRefs } from "vue"
 const store = useStore()
 
-let { userInfo, title } = toRefs(store)
+let { userInfo, title, aboutMe } = toRefs(store)
+// let { userInfo, title } = toRefs(store)
 
 onMounted(() => {
   store.getUserInfo()
+  store.getAboutMe()
 });
 </script>
 

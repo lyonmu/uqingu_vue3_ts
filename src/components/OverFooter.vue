@@ -21,7 +21,7 @@ const runtime = computed(() => {
 </script>
 
 <template>
-    <p>{{ runtime }}</p>
+    <!-- <p>{{ runtime }}</p> -->
     <p>
         <a href="http://beian.miit.gov.cn/" target="_blank">{{ userInfo.miit }}</a>
     </p>

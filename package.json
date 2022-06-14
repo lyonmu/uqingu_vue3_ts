@@ -13,6 +13,7 @@
     "cos-nodejs-sdk-v5": "^2.11.10",
     "dayjs": "^1.11.3",
     "element-plus": "^2.2.0",
+    "md-editor-v3": "^2.1.1",
     "pinia": "^2.0.14",
     "vue": "^3.2.25",
     "vue-router": "4"

@@ -27,7 +27,7 @@ let { url, size, activeIndex } = toRefs(bar)
       我的文章
     </el-menu-item>
     <div class="flex-grow" />
-    <el-menu-item index="aboutme" class="elmenuitem" :route="{ path: `aboutme`, query: { id: 2 } }">
+    <el-menu-item index="/aboutme" class="elmenuitem" >
       About Me
     </el-menu-item>
 

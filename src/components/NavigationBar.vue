@@ -47,7 +47,7 @@ let { url, size, activeIndex } = toRefs(bar)
   text-decoration: none;
   height: 40px;
   line-height: 40px;
-  border: 2px inset #3b2e7e;
+  border: 2px;
   border-radius: 5px;
 }
 

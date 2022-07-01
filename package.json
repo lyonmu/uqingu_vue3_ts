@@ -8,8 +8,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@bytemd/plugin-gfm": "^1.16.0",
+    "@bytemd/vue-next": "^1.16.0",
     "@icon-park/vue-next": "^1.4.0",
     "axios": "^0.27.2",
+    "bytemd": "^1.16.0",
     "cos-nodejs-sdk-v5": "^2.11.10",
     "dayjs": "^1.11.3",
     "element-plus": "^2.2.0",
